@@ -1,0 +1,26 @@
+@startuml
+Main -- Building
+Building -- Room
+
+Building : + ArrayList<Room> rooms, int numberOfBathrooms, int numberOfFloors, boolean isOfficeBuilding
+Building : + boolean getIsOfficeBuilding()
+Building : + int getNumberOfBathrooms()
+Building : + int getNumberOfFloors()
+Building : + ArrayList<Room> getRooms()
+Building : - boolean isOfficeBuilding
+Building : - int numberOfBathrooms
+Building : - int numberOfFloors
+Building : - final ArrayList<Room> rooms
+
+Main : +  static int countLampsInBuilding(Building building)
+Main : +  static boolean isNormal(Building building)
+Main : +  static void main(String[] args)
+
+Room : + Room(int numberOfDoors, int numberOfLamps, int numberOfWindows)
+Room : + int getNumberOfDoors()
+Room : + int getNumberOfLamps()
+Room : + int getNumberOfWindows()
+Room : - int numberOfDoors
+Room : - int numberOfLamps
+Room : - int numberOfWindows
+@enduml
